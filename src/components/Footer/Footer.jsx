@@ -3,14 +3,33 @@ import React from "react";
 const Footer = () => {
   return (
     <footer style={{backgroundColor: "#D03068", color: "#fff", padding: "60px 246px", textAlign: "center" }}>
-        <div style={{display:"flex", backgroundColor: "green"}}>
-            <div style={{ backgroundColor: "#addf0bff" }}>
-                <div></div>
-                <div style={{textAlign:"start" ,fontSize: "24px", fontWeight: "bold", width:"30%" }}>Tempatnya kamu kenal, jelajahi, dan dukung UMKM sekitar.</div>
-                <div></div>
+
+        {/* MAIN GROUP */}
+        <div style={{display:"flex", justifyContent: "space-between", marginbottm:"50px"}}>
+
+            {/* KOLOM 1 */}
+            <div style={{backgroundColor: "#D03068", width:"40%" }}>
+                <div style={{textAlign:"start", fontSize: "24px"}}>LOGO</div>
+                <div style={{textAlign:"start", fontSize: "24px", marginTop: "15px", fontWeight: "bold"}}>Tempatnya kamu kenal, jelajahi, dan dukung UMKM sekitar.</div>
+                <div style={{textAlign:"start", fontSize: "16px", marginTop: "15px"}}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores consequatur</div>
             </div>
-            <div style={{ backgroundColor: "#660ef4ff" }}>Kolom 2</div>
-            <div style={{ backgroundColor: "#0da31aff" }}>Kolom 3</div>
+
+            {/* KOLOM 2 */}
+            <div style={{display: "flex", backgroundColor: "#D03068", width:"30%", textAlign:"start", flexDirection: "column", height:"100%"}}>
+                <div style={{fontSize:"20px"}}>Jelajahi Seliwer</div>
+                <div style={{fontSize:"15px", padding:"5px"}}>Tentang Kami</div>
+                <div style={{fontSize:"15px", padding:"5px"}}>Hubungi Kami</div>
+                <div style={{fontSize:"15px", padding:"5px"}}>Kebijakan Privasi</div>
+                <div style={{fontSize:"15px", padding:"5px"}}>Syarat & Ketentuan</div>
+            </div>
+
+            {/* KOLOM 3 */}
+            <div style={{display: "flex", backgroundColor: "#D03068", textAlign:"start", flexDirection: "column", padding:"20px", height:"100%"}}>
+                <div style={{fontSize:"20px"}}>Ikuti Kami</div>
+                <div style={{fontSize:"15px"}}>Instagram</div>
+                <div style={{fontSize:"15px"}}>Facebook</div>
+                <div style={{fontSize:"15px"}}>Youtube</div>
+            </div>
         </div>
         <div>© 2025 Dion. All rights reserved.</div>
     </footer>
