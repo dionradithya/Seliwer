@@ -1,5 +1,5 @@
 import React from 'react'
-import Card from '../../components/Card'
+import Card from '../../components/Cards/MascotCard'
 import Img1 from '../../assets/img/Card1.svg'
 import Img2 from '../../assets/img/Card2.svg'
 import Img3 from '../../assets/img/Card3.svg'
@@ -7,7 +7,7 @@ import Img4 from '../../assets/img/Card4.svg'
 
 const CardSection = () => {
   return (
-    <div style={{backgroundColor:'aliceblue', height: 'calc(100vh - 70px)', padding:'100px', textAlign:'center'}}>
+    <div style={{height: 'calc(100vh - 70px)', padding:'100px', textAlign:'center'}}>
 
         {/* Card Section Text */}
         <div style={{fontSize:'30px', fontWeight:'bold', marginBottom:'50px'}}>Kenapa Harus Seliwer</div>
