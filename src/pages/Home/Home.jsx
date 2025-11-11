@@ -1,15 +1,13 @@
 import React from 'react'
 import HeroSection from './HeroSection'
 import Footer from "../../components/Footer/Footer"
+import UMKMSection from './UMKMSection';
 
 const Home = () => {
   return (
     <div>
-      
-      {/* Hero Section */}
       <HeroSection />
-
-      {/* Footer */}
+      <UMKMSection />
       <Footer />
     </div>
   );
