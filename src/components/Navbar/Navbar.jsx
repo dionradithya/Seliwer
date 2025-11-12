@@ -9,7 +9,7 @@ import settingIcon from '../../assets/img/settingIcon.svg';
 import logoutIcon from '../../assets/img/logoutIcon.svg';
 
 const Navbar = () => {
-  const [isLoggedIn, setIsLoggedIn] = useState(true); // contoh: sudah login
+  const [isLoggedIn, setIsLoggedIn] = useState(true); 
   const [showDropdown, setShowDropdown] = useState(false);
 
   const handleLogout = () => {
@@ -158,7 +158,7 @@ const Navbar = () => {
                   cursor: 'pointer',
                 }}
               />
-              <span style={{ fontSize: '14px', fontWeight: '500' }}>Neko Trya</span>
+              <span style={{ fontSize: '14px', fontWeight: '500' }}>Hi, Ayu Larasati</span>
 
               {/* Icon dropdown */}
               <img
