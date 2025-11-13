@@ -9,7 +9,7 @@ import settingIcon from '../../assets/img/settingIcon.svg';
 import logoutIcon from '../../assets/img/logoutIcon.svg';
 
 const Navbar = () => {
-  const [isLoggedIn, setIsLoggedIn] = useState(true); 
+  const [isLoggedIn, setIsLoggedIn] = useState(true);
   const [showDropdown, setShowDropdown] = useState(false);
 
   const handleLogout = () => {

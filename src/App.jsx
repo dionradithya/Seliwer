@@ -6,14 +6,17 @@ import About from "./pages/About";
 import AuthPage from "./pages/auth/authPage";
 import LoginPage from "./pages/auth/loginPage";
 import RegisterPage from "./pages/auth/registerPage";
+import ListUMKM from "./pages/seliweran/ListUMKM";
 
 function Layout() {
   const location = useLocation();
+
   const hideNavbar = ["/auth", "/login", "/register"].includes(location.pathname);
 
   return (
     <>
       {!hideNavbar && <Navbar />}
+
       <div style={{ paddingTop: hideNavbar ? "0" : "70px" }}>
         <Routes>
           <Route path="/" element={<Home />} />
@@ -21,6 +24,7 @@ function Layout() {
           <Route path="/auth" element={<AuthPage />} />
           <Route path="/login" element={<LoginPage />} />
           <Route path="/register" element={<RegisterPage />} />
+          <Route path="/seliweran" element={<ListUMKM />} />
         </Routes>
       </div>
     </>
