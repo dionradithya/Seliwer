@@ -6,6 +6,7 @@ import About from "./pages/About";
 import AuthPage from "./pages/auth/authPage";
 import LoginPage from "./pages/auth/loginPage";
 import RegisterPage from "./pages/auth/registerPage";
+import Maps from "./pages/Maps"
 
 function Layout() {
   const location = useLocation();
@@ -21,6 +22,7 @@ function Layout() {
           <Route path="/auth" element={<AuthPage />} />
           <Route path="/login" element={<LoginPage />} />
           <Route path="/register" element={<RegisterPage />} />
+          <Route path="/maps" element={<Maps />} />
         </Routes>
       </div>
     </>
