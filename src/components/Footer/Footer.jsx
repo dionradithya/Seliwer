@@ -1,0 +1,41 @@
+import React from "react";
+import logo from "../../assets/img/Logo_night.svg"
+
+const Footer = () => {
+  return (
+    <footer style={{backgroundColor: "#0B632C", color: "#fff", padding: "60px 246px", textAlign: "center" }}>
+
+        {/* MAIN GROUP */}
+        <div style={{display:"flex", justifyContent: "space-between"}}>
+
+            {/* KOLOM 1 */}
+            <div style={{display: "flex", flexDirection: "column", textAlign:"start", width:"40%" }}>
+                <img src={logo} alt={logo} style={{width:'125px'}}/>
+                <div style={{fontSize: "24px", marginTop: "15px", fontWeight: "bold"}}>Tempatnya kamu kenal, jelajahi, dan dukung UMKM sekitar.</div>
+                <div style={{fontSize: "20px", marginTop: "15px"}}>Tempatnya kamu kenal, jelajahi, dan dukung UMKM sekitar.</div>
+            </div>
+
+            {/* KOLOM 2 */}
+            <div style={{display: "flex", flexDirection: "column", width:"30%", textAlign:"start", height:"100%"}}>
+                <div style={{fontSize:"20px"}}>Jelajahi Seliwer</div>
+                <div style={{fontSize:"15px", padding:"8px 0px"}}>Tentang Kami</div>
+                <div style={{fontSize:"15px", padding:"8px 0px"}}>Hubungi Kami</div>
+                <div style={{fontSize:"15px", padding:"8px 0px"}}>Kebijakan Privasi</div>
+                <div style={{fontSize:"15px", padding:"8px 0px"}}>Syarat & Ketentuan</div>
+            </div>
+
+            {/* KOLOM 3 */}
+            <div style={{display: "flex", flexDirection: "column", width:"20%", textAlign:"start", height:"100%"}}>
+                <div style={{fontSize:"20px"}}>Ikuti Kami</div>
+                <div style={{fontSize:"15px", padding:"8px 0px"}}>Instagram</div>
+                <div style={{fontSize:"15px", padding:"8px 0px"}}>Facebook</div>
+                <div style={{fontSize:"15px", padding:"8px 0px"}}>Youtube</div>
+            </div>
+        </div>
+        <div style={{marginTop: "50px"}}>Copyright © 2025 Seliwer Indonesia</div>
+    </footer>
+  );
+};
+
+export default Footer;
+
