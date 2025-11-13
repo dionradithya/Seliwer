@@ -1,4 +1,5 @@
 import React from "react";
+import logo from "../../assets/img/Logo_night.svg"
 
 const Footer = () => {
   return (
@@ -9,7 +10,7 @@ const Footer = () => {
 
             {/* KOLOM 1 */}
             <div style={{display: "flex", flexDirection: "column", textAlign:"start", width:"40%" }}>
-                <div style={{fontSize: "24px", backgroundColor:"#dd799cff"}}>LOGO</div>
+                <img src={logo} alt={logo} style={{width:'125px'}}/>
                 <div style={{fontSize: "24px", marginTop: "15px", fontWeight: "bold"}}>Tempatnya kamu kenal, jelajahi, dan dukung UMKM sekitar.</div>
                 <div style={{fontSize: "20px", marginTop: "15px"}}>Tempatnya kamu kenal, jelajahi, dan dukung UMKM sekitar.</div>
             </div>

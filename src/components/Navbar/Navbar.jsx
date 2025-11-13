@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import searchIcon from '../../assets/img/SearchIcon.svg';
 import locationIcon from '../../assets/img/MapIcon.svg';
 import logoIcon from '../../assets/img/Logo.svg';
@@ -9,13 +10,20 @@ import settingIcon from '../../assets/img/settingIcon.svg';
 import logoutIcon from '../../assets/img/logoutIcon.svg';
 
 const Navbar = () => {
-  const [isLoggedIn, setIsLoggedIn] = useState(true); 
+  const [isLoggedIn, setIsLoggedIn] = useState(true);
   const [showDropdown, setShowDropdown] = useState(false);
 
   const handleLogout = () => {
     setIsLoggedIn(false);
     setShowDropdown(false);
   };
+
+  const menuItems = [
+    { label: 'Beranda', path: '/' },
+    { label: 'Seliweran Yuk', path: '/seliweran' },
+    { label: 'Lihat di Peta', path: '/maps' },
+    { label: 'Chat', path: '/chat' },
+  ];
 
   return (
     <header
@@ -35,16 +43,16 @@ const Navbar = () => {
       }}
     >
       {/* Logo */}
-      <a href="/" style={{ textDecoration: 'none', display: 'flex', alignItems: 'center' }}>
+      <Link to="/" style={{ textDecoration: 'none', display: 'flex', alignItems: 'center' }}>
         <img src={logoIcon} alt="Logo" style={{ height: '40px', width: 'auto' }} />
-      </a>
+      </Link>
 
       {/* Menu */}
       <nav style={{ display: 'flex', alignItems: 'center' }}>
-        {['Beranda', 'Seliweran Yuk', 'Lihat di Peta', 'Chat'].map((item, i) => (
-          <a
+        {menuItems.map((item, i) => (
+          <Link
             key={i}
-            href="/"
+            to={item.path} // 🔥 arahkan ke rute yang diinginkan
             style={{
               position: 'relative',
               fontSize: '14px',
@@ -56,8 +64,8 @@ const Navbar = () => {
             onMouseEnter={(e) => (e.target.style.borderBottom = '2px solid #FECB08')}
             onMouseLeave={(e) => (e.target.style.borderBottom = 'none')}
           >
-            {item}
-          </a>
+            {item.label}
+          </Link>
         ))}
 
         {/* Kanan */}
@@ -147,7 +155,6 @@ const Navbar = () => {
             </button>
           ) : (
             <div style={{ position: 'relative', display: 'flex', alignItems: 'center', gap: '6px' }}>
-              {/* Foto + Nama */}
               <img
                 src={userIcon}
                 alt="User"
@@ -160,7 +167,6 @@ const Navbar = () => {
               />
               <span style={{ fontSize: '14px', fontWeight: '500' }}>Hi, Ayu Larasati</span>
 
-              {/* Icon dropdown */}
               <img
                 src={dropIcon}
                 alt="Dropdown"
@@ -174,7 +180,6 @@ const Navbar = () => {
                 onClick={() => setShowDropdown(!showDropdown)}
               />
 
-              {/* Dropdown menu */}
               {showDropdown && (
                 <div
                   style={{
@@ -193,7 +198,7 @@ const Navbar = () => {
                     { label: 'Tersimpan', icon: savedIcon },
                     { label: 'Pengaturan', icon: settingIcon },
                     { label: 'Keluar', icon: logoutIcon },
-                    ].map((menu, idx) => (
+                  ].map((menu, idx) => (
                     <div
                       key={idx}
                       onClick={() => {
