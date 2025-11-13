@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import searchIcon from '../../assets/img/SearchIcon.svg';
 import locationIcon from '../../assets/img/MapIcon.svg';
 import logoIcon from '../../assets/img/Logo.svg';
